@@ -97,11 +97,8 @@
           <a href="#" onclick="event.preventDefault()">UnderwaterEVER</a>
         </p>
         <p class="entry-desc">
-          Physics-informed novel-view synthesis for underwater scenes. Embeds a differentiable
-          underwater image-formation model into EVER's volumetric renderer, achieving best PSNR
-          and SSIM on all four SeaThru-NeRF benchmark scenes at 20 FPS (~260× faster than
-          SeaThru-NeRF, the baseline). As a free by-product, it "dewaters" scenes at inference
-          — no clean-water supervision needed.
+          Physics-informed underwater novel-view synthesis at real-time speed, with free scene
+          dewatering at inference.
         </p>
         <p class="entry-links">
           <a href="https://github.com/MeravKeidar/Underwater_NVS" target="_blank" rel="noopener"
@@ -126,10 +123,8 @@
           <a href="#" onclick="event.preventDefault()">Diffusion Inpainting</a>
         </p>
         <p class="entry-desc">
-          An advanced image inpainting pipeline built on Stable Diffusion 2. Introduces four
-          improvements over vanilla diffusion inpainting — masked cross-attention, resampling,
-          mask dilation, and guidance-scale scheduling — with a full evaluation framework and
-          an interactive GUI mask-creation tool.
+          Text-guided image inpainting pipeline extending Stable Diffusion 2 with four
+          algorithmic improvements and a full evaluation framework.
         </p>
         <p class="entry-links">
           <a href="https://github.com/yonatankoren/Diffusion-Inpainting" target="_blank" rel="noopener"
@@ -155,9 +150,8 @@
           <a href="#" onclick="event.preventDefault()">MoP – Drawing Machine</a>
         </p>
         <p class="entry-desc">
-          A real-life pintograph drawing machine with a matching Grasshopper simulator and
-          interactive GUI. Built with Ashish Jain and Shay Sharvit as part of the studio
-          course "Matter of Perspective," directed by Prof. Gershon Elber and Yoav Sterman.
+          A real-life pintograph drawing machine paired with a Grasshopper simulator and
+          interactive GUI.
         </p>
         <p class="entry-links">
           <a href="https://github.com/MeravKeidar/MoP" target="_blank" rel="noopener"
@@ -180,9 +174,8 @@
           <a href="#" onclick="event.preventDefault()">Graphics GUI</a>
         </p>
         <p class="entry-desc">
-          A computer graphics GUI built with OpenGL as part of the Computer Graphics course
-          at Technion CS. Features real-time 3D rendering with configurable shaders, mesh
-          loading, and lighting controls.
+          Real-time 3D rendering GUI built with OpenGL, featuring configurable shaders, mesh
+          loading, and interactive lighting.
         </p>
         <p class="entry-links">
           <a href="https://github.com/MeravKeidar/Graphics-GUI" target="_blank" rel="noopener"
@@ -211,10 +204,12 @@
     <button class="modal-close" onclick="closeModal('modal-underwater')" aria-label="Close">×</button>
     <h2 class="modal-title">UnderwaterEVER – Physics-Informed Underwater Novel View Synthesis</h2>
     <div class="modal-gallery">
-      <img src="assets/projects/underwater-comparison.jpg"
-           alt="Novel-view synthesis on four SeaThru-NeRF scenes (IUI3-RedSea, Curaçao, JapaneseGardens-RedSea, Panama)">
+      <img src="assets/projects/underwater-grid.png"
+           alt="Qualitative comparison (GT · SeaThru-NeRF · EVER · UnderwaterEVER) across all four scenes">
       <img src="assets/projects/underwater-restoration.jpg"
            alt="Scene restoration on Curaçao: ground-truth underwater · our render · dewatered render">
+      <img src="assets/projects/underwater-comparison.jpg"
+           alt="Novel-view synthesis on four SeaThru-NeRF scenes">
     </div>
     <p class="modal-desc">
       UnderwaterEVER bridges two competing approaches: the fast but physics-agnostic
@@ -252,6 +247,10 @@
     <div class="modal-gallery">
       <img src="assets/projects/diffusion-qualitative.png"
            alt="Qualitative comparisons across COCO, EditBench, and MagicBrush benchmarks">
+      <img src="assets/projects/diffusion-kitchen.png"
+           alt="Kitchen example input image">
+      <img src="assets/projects/diffusion-kucha.jpg"
+           alt="Kucha example input image">
     </div>
     <p class="modal-desc">
       Built on top of the Hugging Face <code>sd2-community/stable-diffusion-2-base</code> model,
