@@ -44,15 +44,16 @@ strong {
 /* ===== Header ===== */
 header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  align-items: flex-start;
   text-align: center;
   margin-bottom: 44px;
-  gap: 20px;
+  gap: 36px;
 }
 
 .header-photo {
-  order: -1;
+  order: 1;
+  flex-shrink: 0;
 }
 
 .header-photo img {
@@ -65,7 +66,7 @@ header {
 }
 
 .header-bio {
-  width: 100%;
+  flex: 1;
 }
 
 .name {
