@@ -57,11 +57,10 @@ header {
 }
 
 .header-photo img {
-  width: 150px;
-  height: 150px;
+  width: 175px;
+  height: 175px;
   border-radius: 50%;
-  object-fit: cover;
-  object-position: center top;
+  object-fit: contain;
   display: block;
   filter: grayscale(8%);
 }
