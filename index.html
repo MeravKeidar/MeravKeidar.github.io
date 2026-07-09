@@ -46,15 +46,7 @@
 
     <div class="entry-row">
       <div class="entry-thumb">
-        <!-- Replace with: <img src="assets/pubs/videomdm-thumb.jpg" alt="VideoMDM"> -->
-        <div class="thumb-ph">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-               stroke="currentColor" stroke-width="1.5">
-            <rect x="3" y="3" width="18" height="18" rx="1"/>
-            <circle cx="8.5" cy="8.5" r="1.5"/>
-            <polyline points="21,15 16,10 5,21"/>
-          </svg>
-        </div>
+        <img src="assets/pubs/videomdm-thumb.png" alt="VideoMDM">
       </div>
       <div class="entry-info">
         <p class="entry-title">
@@ -66,8 +58,8 @@
           Amir Mann, Gal Michael Harari, <strong>Merav Keidar</strong>, Or Litany
         </p>
         <p class="entry-desc">
-          A diffusion framework that learns 3D human-motion priors from monocular video
-          using only 2D supervision, without requiring 3D ground-truth annotations.
+          A diffusion-based framework that trains 3D human motion priors directly from
+          accurate 2D poses extracted from monocular videos, without any 3D ground truth.
         </p>
         <p class="entry-links">
           <a href="https://arxiv.org/abs/2606.13364" target="_blank" rel="noopener">arXiv</a>
@@ -323,7 +315,7 @@
       &nbsp;·&nbsp; <em>Normal mapping</em> — tangent-space normal maps for surface detail without extra geometry.<br>
       &nbsp;·&nbsp; <em>Environment mapping</em> — skybox cubemap with reflective/refractive materials
       (as seen in the chrome cow render above).<br>
-      &nbsp;·&nbsp; <em>Animation</em> — skeletal mesh animation with skinned characters.<br>
+      &nbsp;·&nbsp; <em>Shader animations</em> — vertex-shader deformations (stretch along X/Y/Z axes, noisy turbulence) and fragment-shader effects (sinusoidal color cycling, procedural marble texture), all time-driven and toggleable from the GUI.<br>
       &nbsp;·&nbsp; <em>Lighting</em> — configurable point and directional lights with interactive controls.<br><br>
       The ImGui interface allows switching shaders, loading OBJ files, tweaking lighting
       parameters, and manipulating the scene in real time.
