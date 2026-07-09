@@ -225,9 +225,9 @@
       volumetric renderer — replacing each segment's single color term with two physically
       grounded terms: attenuated object color and depth-dependent backscatter.<br><br>
       The physics is controlled by <em>WaterGlobal</em>, a tiny module holding just
-      <strong>9 learnable scalars</strong> (σ_D, σ_B, c_med) shared across all views.
-      σ_D is seeded from per-channel image statistics and constrained by a spectral-ordering
-      loss (σ_D,R ≥ σ_D,G ≥ σ_D,B), reflecting how seawater absorbs red faster than green
+      <strong>9 learnable scalars</strong> (σ<sub>D</sub>, σ<sub>B</sub>, c<sub>med</sub>) shared across all views.
+      σ<sub>D</sub> is seeded from per-channel image statistics and constrained by a spectral-ordering
+      loss (σ<sub>D,R</sub> ≥ σ<sub>D,G</sub> ≥ σ<sub>D,B</sub>), reflecting how seawater absorbs red faster than green
       faster than blue. Zeroing these parameters at inference yields free scene restoration
       — color-corrected, dewatered views with no clean-water ground truth.<br><br>
       <strong>Results on the SeaThru-NeRF benchmark (4 scenes, RTX 6000 Ada):</strong><br>
