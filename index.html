@@ -165,8 +165,7 @@
     <!-- Graphics GUI -->
     <div class="entry-row clickable" onclick="openModal('modal-graphics')">
       <div class="entry-thumb">
-        <img src="https://cdn.myportfolio.com/cb621f22-ac6f-466d-8f4c-4a4acf32821b/d0ccd6a2-532e-42a8-86fc-8cfa494698d0_carw_16x9x32.jpeg?h=a38679b3c76d154cdbef8b7c3778f638"
-             alt="Graphics GUI">
+        <img src="assets/projects/graphics-cow.jpg" alt="Graphics GUI – reflective cow with environment mapping">
       </div>
       <div class="entry-info">
         <p class="entry-title">
@@ -311,13 +310,23 @@
     <button class="modal-close" onclick="closeModal('modal-graphics')" aria-label="Close">×</button>
     <h2 class="modal-title">Graphics GUI</h2>
     <div class="modal-gallery">
-      <img src="https://cdn.myportfolio.com/cb621f22-ac6f-466d-8f4c-4a4acf32821b/d0ccd6a2-532e-42a8-86fc-8cfa494698d0_carw_16x9x32.jpeg?h=a38679b3c76d154cdbef8b7c3778f638"
-           alt="Graphics GUI">
+      <img src="assets/projects/graphics-cow.jpg"
+           alt="Reflective chrome cow with environment/skybox mapping">
     </div>
     <p class="modal-desc">
-      A computer graphics GUI built with OpenGL, developed as part of the Computer Graphics
-      course at Technion CS. Features real-time 3D rendering with configurable shaders, mesh
-      loading, Phong/Gouraud shading, lighting controls, and interactive scene manipulation.
+      A real-time 3D rendering engine with an ImGui interface, built from scratch in C++ and
+      OpenGL as part of the Computer Graphics course at Technion CS.<br><br>
+      <strong>Rendering features:</strong><br>
+      &nbsp;·&nbsp; <em>Shading modes</em> — Phong, Gouraud, and Flat shading, each implemented as a separate
+      GLSL vertex/fragment shader pair.<br>
+      &nbsp;·&nbsp; <em>Texture mapping</em> — UV-mapped diffuse textures on arbitrary OBJ meshes.<br>
+      &nbsp;·&nbsp; <em>Normal mapping</em> — tangent-space normal maps for surface detail without extra geometry.<br>
+      &nbsp;·&nbsp; <em>Environment mapping</em> — skybox cubemap with reflective/refractive materials
+      (as seen in the chrome cow render above).<br>
+      &nbsp;·&nbsp; <em>Animation</em> — skeletal mesh animation with skinned characters.<br>
+      &nbsp;·&nbsp; <em>Lighting</em> — configurable point and directional lights with interactive controls.<br><br>
+      The ImGui interface allows switching shaders, loading OBJ files, tweaking lighting
+      parameters, and manipulating the scene in real time.
     </p>
     <p class="modal-actions">
       <a href="https://github.com/MeravKeidar/Graphics-GUI" target="_blank" rel="noopener">GitHub</a>
