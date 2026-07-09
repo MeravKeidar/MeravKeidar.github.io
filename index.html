@@ -142,8 +142,7 @@
     <!-- MoP Drawing Machine -->
     <div class="entry-row clickable" onclick="openModal('modal-mop')">
       <div class="entry-thumb">
-        <img src="https://cdn.myportfolio.com/cb621f22-ac6f-466d-8f4c-4a4acf32821b/0e3dad63-22d8-42ca-98f3-efb965a3bbdb_rwc_55x15x1116x629x32.jpg?h=49dbcdb48e13367bb1c1f347ee5710e7"
-             alt="MoP Drawing Machine">
+        <img src="assets/projects/mop-machine.jpg" alt="MoP Drawing Machine">
       </div>
       <div class="entry-info">
         <p class="entry-title">
@@ -277,14 +276,25 @@
     <button class="modal-close" onclick="closeModal('modal-mop')" aria-label="Close">×</button>
     <h2 class="modal-title">MoP – Drawing Machine</h2>
     <div class="modal-gallery">
-      <img src="https://cdn.myportfolio.com/cb621f22-ac6f-466d-8f4c-4a4acf32821b/0e3dad63-22d8-42ca-98f3-efb965a3bbdb_rwc_55x15x1116x629x32.jpg?h=49dbcdb48e13367bb1c1f347ee5710e7"
-           alt="MoP Drawing Machine">
+      <img src="assets/projects/mop-machine.jpg" alt="CAD render of the drawing machine">
+      <img src="assets/projects/mop-drawing.png" alt="Machine in action drawing on canvas">
+      <img src="assets/projects/mop-patterns.png" alt="Four physical drawings produced by the machine">
+      <img src="assets/projects/mop-gui.jpg" alt="PintoProc GUI – motor controls and live simulation">
+      <img src="assets/projects/mop-grasshopper.jpg" alt="Grasshopper plug-in simulating the pintograph geometry">
     </div>
     <p class="modal-desc">
-      A real-life pintograph drawing machine accompanied by a matching Grasshopper simulator
-      and an interactive GUI. The machine translates parametric rules into physical drawings,
-      bridging computational design and physical fabrication.<br><br>
-      Created in collaboration with Ashish Jain and Shay Sharvit as part of the studio course
+      A fully functional pintograph drawing machine designed and built from scratch, paired
+      with a complete software stack for design and control.<br><br>
+      The machine uses three independently driven discs (two arm discs + one rotating canvas)
+      to trace complex Lissajous-like paths. Speed ratios and rotation directions are the main
+      design parameters — small changes produce dramatically different patterns.<br><br>
+      <strong>Software stack:</strong><br>
+      &nbsp;·&nbsp; <em>Grasshopper plug-in</em> — parametric simulation of the pintograph geometry
+      directly inside Rhino; tracks the pen-point path in real time to preview patterns before printing.<br>
+      &nbsp;·&nbsp; <em>PintoProc GUI</em> (Processing 4 / Java) — controls all three motors via serial,
+      manages speed/direction/acceleration, runs a live pattern preview, and exports PNGs.
+      One click sends the configuration to the machine.<br><br>
+      Created with Ashish Jain and Shay Sharvit as part of the studio course
       <em>Matter of Perspective</em>, directed by Prof. Gershon Elber and Yoav Sterman.
     </p>
     <p class="modal-actions">
