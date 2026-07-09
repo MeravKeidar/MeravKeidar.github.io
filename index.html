@@ -102,11 +102,13 @@
       </div>
       <div class="entry-info">
         <p class="entry-title">
-          <a href="#" onclick="event.preventDefault()">Underwater NVS</a>
+          <a href="#" onclick="event.preventDefault()">UnderwaterEVER</a>
         </p>
         <p class="entry-desc">
-          Novel View Synthesis for underwater environments using neural scene representation.
-          Reconstructs new viewpoints from sparse input images for marine research applications.
+          Physics-informed novel-view synthesis for underwater scenes. Embeds a differentiable
+          underwater image-formation model into a volumetric renderer, enabling real-time
+          rendering at 20 FPS — ~260× faster than SeaThru-NeRF — while recovering water
+          optical properties without clean-water supervision.
         </p>
         <p class="entry-links">
           <a href="https://github.com/MeravKeidar/Underwater_NVS" target="_blank" rel="noopener"
@@ -114,7 +116,7 @@
           <span class="sep">/</span>
           <a href="#" onclick="event.preventDefault(); openModal('modal-underwater')">details</a>
         </p>
-        <p class="entry-tags">C++ &nbsp;·&nbsp; Neural Rendering &nbsp;·&nbsp; Computer Vision</p>
+        <p class="entry-tags">Python &nbsp;·&nbsp; C++ &nbsp;·&nbsp; PyTorch &nbsp;·&nbsp; CUDA &nbsp;·&nbsp; Neural Rendering</p>
       </div>
     </div>
 
@@ -135,38 +137,34 @@
           <a href="#" onclick="event.preventDefault()">Diffusion Inpainting</a>
         </p>
         <p class="entry-desc">
-          Image inpainting using diffusion models. Fills masked regions with coherent,
-          high-quality completions that blend naturally with surrounding content.
+          Advanced image inpainting pipeline built on Stable Diffusion 2. Introduces masked
+          cross-attention, resampling, mask dilation, and guidance-scale scheduling to produce
+          higher-quality completions than standard diffusion inpainting baselines.
         </p>
         <p class="entry-links">
-          <a href="https://github.com/MeravKeidar/Diffusion-Inpainting" target="_blank" rel="noopener"
+          <a href="https://github.com/yonatankoren/Diffusion-Inpainting" target="_blank" rel="noopener"
              onclick="event.stopPropagation()">GitHub</a>
           <span class="sep">/</span>
           <a href="#" onclick="event.preventDefault(); openModal('modal-diffusion')">details</a>
         </p>
-        <p class="entry-tags">Python &nbsp;·&nbsp; PyTorch &nbsp;·&nbsp; Diffusion Models</p>
+        <p class="entry-tags">Python &nbsp;·&nbsp; PyTorch &nbsp;·&nbsp; Stable Diffusion &nbsp;·&nbsp; Generative AI</p>
       </div>
     </div>
 
     <!-- MoP Drawing Machine -->
     <div class="entry-row clickable" onclick="openModal('modal-mop')">
       <div class="entry-thumb">
-        <div class="thumb-ph">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-               stroke="currentColor" stroke-width="1.5">
-            <rect x="3" y="3" width="18" height="18" rx="1"/>
-            <circle cx="8.5" cy="8.5" r="1.5"/>
-            <polyline points="21,15 16,10 5,21"/>
-          </svg>
-        </div>
+        <img src="https://cdn.myportfolio.com/cb621f22-ac6f-466d-8f4c-4a4acf32821b/0e3dad63-22d8-42ca-98f3-efb965a3bbdb_rwc_55x15x1116x629x32.jpg?h=49dbcdb48e13367bb1c1f347ee5710e7"
+             alt="MoP Drawing Machine">
       </div>
       <div class="entry-info">
         <p class="entry-title">
           <a href="#" onclick="event.preventDefault()">MoP – Drawing Machine</a>
         </p>
         <p class="entry-desc">
-          A generative drawing machine built with Processing. Combines algorithmic creativity
-          and computational art, sitting at the intersection of fine arts, design, and code.
+          A real-life pintograph drawing machine with a matching Grasshopper simulator and
+          interactive GUI. Built with Ashish Jain and Shay Sharvit as part of the studio
+          course "Matter of Perspective," directed by Prof. Gershon Elber and Yoav Sterman.
         </p>
         <p class="entry-links">
           <a href="https://github.com/MeravKeidar/MoP" target="_blank" rel="noopener"
@@ -174,29 +172,24 @@
           <span class="sep">/</span>
           <a href="#" onclick="event.preventDefault(); openModal('modal-mop')">details</a>
         </p>
-        <p class="entry-tags">Processing &nbsp;·&nbsp; Generative Art &nbsp;·&nbsp; Creative Coding</p>
+        <p class="entry-tags">Grasshopper &nbsp;·&nbsp; Processing &nbsp;·&nbsp; Generative Design &nbsp;·&nbsp; Fabrication</p>
       </div>
     </div>
 
     <!-- Graphics GUI -->
     <div class="entry-row clickable" onclick="openModal('modal-graphics')">
       <div class="entry-thumb">
-        <div class="thumb-ph">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-               stroke="currentColor" stroke-width="1.5">
-            <rect x="3" y="3" width="18" height="18" rx="1"/>
-            <circle cx="8.5" cy="8.5" r="1.5"/>
-            <polyline points="21,15 16,10 5,21"/>
-          </svg>
-        </div>
+        <img src="https://cdn.myportfolio.com/cb621f22-ac6f-466d-8f4c-4a4acf32821b/d0ccd6a2-532e-42a8-86fc-8cfa494698d0_carw_16x9x32.jpeg?h=a38679b3c76d154cdbef8b7c3778f638"
+             alt="Graphics GUI">
       </div>
       <div class="entry-info">
         <p class="entry-title">
           <a href="#" onclick="event.preventDefault()">Graphics GUI</a>
         </p>
         <p class="entry-desc">
-          An interactive GUI for Computer Graphics built with OpenGL and ImGui. Real-time 3D
-          rendering with configurable shaders, mesh loading, and scene controls.
+          A computer graphics GUI built with OpenGL as part of the Computer Graphics course
+          at Technion CS. Features real-time 3D rendering with configurable shaders, mesh
+          loading, and lighting controls.
         </p>
         <p class="entry-links">
           <a href="https://github.com/MeravKeidar/Graphics-GUI" target="_blank" rel="noopener"
@@ -223,9 +216,8 @@
   <div class="modal-backdrop" onclick="closeModal('modal-underwater')"></div>
   <div class="modal-box">
     <button class="modal-close" onclick="closeModal('modal-underwater')" aria-label="Close">×</button>
-    <h2 class="modal-title">Underwater NVS</h2>
+    <h2 class="modal-title">UnderwaterEVER – Physics-Informed Novel View Synthesis</h2>
     <div class="modal-gallery">
-      <!-- Replace placeholders with actual images -->
       <div class="img-placeholder">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
         <span>Add image</span>
@@ -236,17 +228,21 @@
       </div>
     </div>
     <p class="modal-desc">
-      Novel View Synthesis for underwater environments. Applies neural scene representation
-      techniques to reconstruct and synthesize new viewpoints of underwater scenes from a
-      sparse set of input images. Developed during my time as a Research Assistant at the
-      VISEAON Marine Imaging Lab, Haifa University.
+      UnderwaterEVER combines the speed of EVER (Exact Volumetric Rendering) with underwater-specific
+      physics modeling. A differentiable underwater image-formation model is embedded directly into the
+      volumetric renderer, replacing single color terms with attenuated object color and backscatter using
+      per-channel attenuation (σ_D), backscatter coefficient (σ_B), and veiling-light color (c_med).<br><br>
+      The WaterGlobal module learns only 9 scalars shared across views, initialized from training image
+      statistics and constrained by a spectral-ordering loss. The result: 27.22 dB PSNR on the
+      SeaThru-NeRF benchmark at 20 FPS — roughly 260× faster than SeaThru-NeRF — with full recovery
+      of water optical properties at no extra computational cost.
     </p>
     <p class="modal-actions">
       <a href="https://github.com/MeravKeidar/Underwater_NVS" target="_blank" rel="noopener">GitHub</a>
       <span class="modal-sep">/</span>
-      <a href="assets/reports/underwater-report.pdf" target="_blank">[Report PDF]</a>
+      <a href="assets/reports/underwater-report.pdf" target="_blank">Report PDF</a>
     </p>
-    <p class="modal-tags">C++ &nbsp;·&nbsp; Neural Rendering &nbsp;·&nbsp; Computer Vision</p>
+    <p class="modal-tags">Python &nbsp;·&nbsp; C++ &nbsp;·&nbsp; PyTorch &nbsp;·&nbsp; CUDA / OptiX &nbsp;·&nbsp; Neural Rendering</p>
   </div>
 </div>
 
@@ -267,16 +263,20 @@
       </div>
     </div>
     <p class="modal-desc">
-      Image inpainting using diffusion models. Implements diffusion-based generative models
-      to seamlessly fill masked or missing regions of images, producing coherent completions
-      that blend naturally with the surrounding content.
+      An advanced image inpainting pipeline built on Stable Diffusion 2. At each denoising step, the
+      latent vector is mixed with an expected instance of the original image in the unmasked region,
+      preserving context while generating the masked area.<br><br>
+      Four key improvements over vanilla diffusion inpainting: <em>masked cross-attention</em> for
+      better region awareness, <em>resampling</em> to refine completions iteratively, <em>mask dilation</em>
+      for smoother boundary transitions, and <em>guidance-scale scheduling</em> to dynamically tune
+      generation quality. Includes a full evaluation framework and an interactive GUI mask-creation tool.
     </p>
     <p class="modal-actions">
-      <a href="https://github.com/MeravKeidar/Diffusion-Inpainting" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://github.com/yonatankoren/Diffusion-Inpainting" target="_blank" rel="noopener">GitHub</a>
       <span class="modal-sep">/</span>
-      <a href="assets/reports/diffusion-report.pdf" target="_blank">[Report PDF]</a>
+      <a href="assets/reports/diffusion-report.pdf" target="_blank">Report PDF</a>
     </p>
-    <p class="modal-tags">Python &nbsp;·&nbsp; PyTorch &nbsp;·&nbsp; Diffusion Models &nbsp;·&nbsp; Generative AI</p>
+    <p class="modal-tags">Python &nbsp;·&nbsp; PyTorch &nbsp;·&nbsp; Stable Diffusion 2 &nbsp;·&nbsp; Generative AI</p>
   </div>
 </div>
 
@@ -287,26 +287,22 @@
     <button class="modal-close" onclick="closeModal('modal-mop')" aria-label="Close">×</button>
     <h2 class="modal-title">MoP – Drawing Machine</h2>
     <div class="modal-gallery">
-      <div class="img-placeholder">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
-        <span>Add image</span>
-      </div>
-      <div class="img-placeholder">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
-        <span>Add image</span>
-      </div>
+      <img src="https://cdn.myportfolio.com/cb621f22-ac6f-466d-8f4c-4a4acf32821b/0e3dad63-22d8-42ca-98f3-efb965a3bbdb_rwc_55x15x1116x629x32.jpg?h=49dbcdb48e13367bb1c1f347ee5710e7"
+           alt="MoP Drawing Machine">
     </div>
     <p class="modal-desc">
-      A generative drawing machine built with Processing. Combines algorithmic creativity
-      and computational art to produce autonomous drawings, exploring what it means for a
-      program to draw — sitting at the intersection of fine arts, industrial design, and code.
+      A real-life pintograph drawing machine accompanied by a matching Grasshopper simulator
+      and an interactive GUI. The machine translates parametric rules into physical drawings,
+      bridging computational design and physical fabrication.<br><br>
+      Created in collaboration with Ashish Jain and Shay Sharvit as part of the studio course
+      <em>Matter of Perspective</em>, directed by Prof. Gershon Elber and Yoav Sterman.
     </p>
     <p class="modal-actions">
       <a href="https://github.com/MeravKeidar/MoP" target="_blank" rel="noopener">GitHub</a>
       <span class="modal-sep">/</span>
-      <a href="assets/reports/mop-report.pdf" target="_blank">[Report PDF]</a>
+      <a href="assets/reports/mop-report.pdf" target="_blank">Report PDF</a>
     </p>
-    <p class="modal-tags">Processing &nbsp;·&nbsp; Generative Art &nbsp;·&nbsp; Creative Coding</p>
+    <p class="modal-tags">Grasshopper &nbsp;·&nbsp; Processing &nbsp;·&nbsp; Generative Design &nbsp;·&nbsp; Physical Fabrication</p>
   </div>
 </div>
 
@@ -317,24 +313,18 @@
     <button class="modal-close" onclick="closeModal('modal-graphics')" aria-label="Close">×</button>
     <h2 class="modal-title">Graphics GUI</h2>
     <div class="modal-gallery">
-      <div class="img-placeholder">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
-        <span>Add image</span>
-      </div>
-      <div class="img-placeholder">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
-        <span>Add image</span>
-      </div>
+      <img src="https://cdn.myportfolio.com/cb621f22-ac6f-466d-8f4c-4a4acf32821b/d0ccd6a2-532e-42a8-86fc-8cfa494698d0_carw_16x9x32.jpeg?h=a38679b3c76d154cdbef8b7c3778f638"
+           alt="Graphics GUI">
     </div>
     <p class="modal-desc">
-      An interactive GUI for Computer Graphics built with OpenGL and ImGui. Features real-time
-      3D rendering with configurable shaders, mesh loading, lighting controls, and scene
-      manipulation — a hands-on environment for exploring core graphics techniques.
+      A computer graphics GUI built with OpenGL, developed as part of the Computer Graphics
+      course at Technion CS. Features real-time 3D rendering with configurable shaders, mesh
+      loading, Phong/Gouraud shading, lighting controls, and interactive scene manipulation.
     </p>
     <p class="modal-actions">
       <a href="https://github.com/MeravKeidar/Graphics-GUI" target="_blank" rel="noopener">GitHub</a>
       <span class="modal-sep">/</span>
-      <a href="assets/reports/graphics-report.pdf" target="_blank">[Report PDF]</a>
+      <a href="assets/reports/graphics-report.pdf" target="_blank">Report PDF</a>
     </p>
     <p class="modal-tags">C++ &nbsp;·&nbsp; OpenGL &nbsp;·&nbsp; ImGui &nbsp;·&nbsp; GLSL</p>
   </div>
