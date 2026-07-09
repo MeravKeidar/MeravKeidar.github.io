@@ -90,15 +90,7 @@
     <!-- Underwater NVS -->
     <div class="entry-row clickable" onclick="openModal('modal-underwater')">
       <div class="entry-thumb">
-        <!-- Replace with: <img src="assets/projects/underwater-thumb.jpg" alt="Underwater NVS"> -->
-        <div class="thumb-ph">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-               stroke="currentColor" stroke-width="1.5">
-            <rect x="3" y="3" width="18" height="18" rx="1"/>
-            <circle cx="8.5" cy="8.5" r="1.5"/>
-            <polyline points="21,15 16,10 5,21"/>
-          </svg>
-        </div>
+        <img src="assets/projects/underwater-comparison.jpg" alt="UnderwaterEVER">
       </div>
       <div class="entry-info">
         <p class="entry-title">
@@ -106,9 +98,10 @@
         </p>
         <p class="entry-desc">
           Physics-informed novel-view synthesis for underwater scenes. Embeds a differentiable
-          underwater image-formation model into a volumetric renderer, enabling real-time
-          rendering at 20 FPS (~260× faster than SeaThru-NeRF, the baseline) while recovering water
-          optical properties without clean-water supervision.
+          underwater image-formation model into EVER's volumetric renderer, achieving best PSNR
+          and SSIM on all four SeaThru-NeRF benchmark scenes at 20 FPS (~260× faster than
+          SeaThru-NeRF, the baseline). As a free by-product, it "dewaters" scenes at inference
+          — no clean-water supervision needed.
         </p>
         <p class="entry-links">
           <a href="https://github.com/MeravKeidar/Underwater_NVS" target="_blank" rel="noopener"
@@ -116,7 +109,7 @@
           <span class="sep">/</span>
           <a href="#" onclick="event.preventDefault(); openModal('modal-underwater')">details</a>
         </p>
-        <p class="entry-tags">Python &nbsp;·&nbsp; C++ &nbsp;·&nbsp; PyTorch &nbsp;·&nbsp; CUDA &nbsp;·&nbsp; Neural Rendering</p>
+        <p class="entry-tags">Python &nbsp;·&nbsp; C++ &nbsp;·&nbsp; PyTorch &nbsp;·&nbsp; CUDA / OptiX &nbsp;·&nbsp; Neural Rendering</p>
       </div>
     </div>
 
@@ -216,31 +209,33 @@
   <div class="modal-backdrop" onclick="closeModal('modal-underwater')"></div>
   <div class="modal-box">
     <button class="modal-close" onclick="closeModal('modal-underwater')" aria-label="Close">×</button>
-    <h2 class="modal-title">UnderwaterEVER – Physics-Informed Novel View Synthesis</h2>
+    <h2 class="modal-title">UnderwaterEVER – Physics-Informed Underwater Novel View Synthesis</h2>
     <div class="modal-gallery">
-      <div class="img-placeholder">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
-        <span>Add image</span>
-      </div>
-      <div class="img-placeholder">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
-        <span>Add image</span>
-      </div>
+      <img src="assets/projects/underwater-comparison.jpg"
+           alt="Novel-view synthesis on four SeaThru-NeRF scenes (IUI3-RedSea, Curaçao, JapaneseGardens-RedSea, Panama)">
+      <img src="assets/projects/underwater-restoration.jpg"
+           alt="Scene restoration on Curaçao: ground-truth underwater · our render · dewatered render">
     </div>
     <p class="modal-desc">
-      UnderwaterEVER combines the speed of EVER (Exact Volumetric Rendering) with underwater-specific
-      physics modeling. A differentiable underwater image-formation model is embedded directly into the
-      volumetric renderer, replacing single color terms with attenuated object color and backscatter using
-      per-channel attenuation (σ_D), backscatter coefficient (σ_B), and veiling-light color (c_med).<br><br>
-      The WaterGlobal module learns only 9 scalars shared across views, initialized from training image
-      statistics and constrained by a spectral-ordering loss. The result: 27.22 dB PSNR on the
-      SeaThru-NeRF benchmark at 20 FPS (roughly 260× faster than SeaThru-NeRF, the baseline) with full recovery
-      of water optical properties at no extra computational cost.
+      UnderwaterEVER bridges two competing approaches: the fast but physics-agnostic
+      <a href="https://arxiv.org/abs/2410.01804" target="_blank" rel="noopener">EVER</a>
+      renderer and the physically accurate but slow
+      <a href="https://sea-thru-nerf.github.io/" target="_blank" rel="noopener">SeaThru-NeRF</a>.
+      It embeds a differentiable underwater image-formation model directly inside EVER's
+      volumetric renderer — replacing each segment's single color term with two physically
+      grounded terms: attenuated object color and depth-dependent backscatter.<br><br>
+      The physics is controlled by <em>WaterGlobal</em>, a tiny module holding just
+      <strong>9 learnable scalars</strong> (σ_D, σ_B, c_med) shared across all views.
+      σ_D is seeded from per-channel image statistics and constrained by a spectral-ordering
+      loss (σ_D,R ≥ σ_D,G ≥ σ_D,B), reflecting how seawater absorbs red faster than green
+      faster than blue. Zeroing these parameters at inference yields free scene restoration
+      — color-corrected, dewatered views with no clean-water ground truth.<br><br>
+      <strong>Results on the SeaThru-NeRF benchmark (4 scenes, RTX 6000 Ada):</strong><br>
+      27.22 dB avg. PSNR · 0.882 avg. SSIM · 20 FPS
+      — best on both metrics, matching EVER's speed to within 1.6%.
     </p>
     <p class="modal-actions">
       <a href="https://github.com/MeravKeidar/Underwater_NVS" target="_blank" rel="noopener">GitHub</a>
-      <span class="modal-sep">/</span>
-      <a href="assets/reports/underwater-report.pdf" target="_blank">Report PDF</a>
     </p>
     <p class="modal-tags">Python &nbsp;·&nbsp; C++ &nbsp;·&nbsp; PyTorch &nbsp;·&nbsp; CUDA / OptiX &nbsp;·&nbsp; Neural Rendering</p>
   </div>
