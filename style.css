@@ -60,7 +60,8 @@ header {
   width: 175px;
   height: 175px;
   border-radius: 50%;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center top;
   display: block;
   filter: grayscale(8%);
 }
