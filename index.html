@@ -152,6 +152,29 @@
       </div>
     </div>
 
+    <!-- Robotic Motion Planning -->
+    <div class="entry-row clickable" onclick="openModal('modal-robotics')">
+      <div class="entry-thumb">
+        <img src="assets/projects/robotics-simulation.gif" alt="UR5e dual-arm RRT* motion planning simulation">
+      </div>
+      <div class="entry-info">
+        <p class="entry-title">
+          <a href="#" onclick="event.preventDefault()">Robotic Motion Planning</a>
+        </p>
+        <p class="entry-desc">
+          Dual-arm UR5e manipulation using RRT* planning in configuration space, with
+          collision avoidance, inverse kinematics, and real robot execution.
+        </p>
+        <p class="entry-links">
+          <a href="https://github.com/MeravKeidar/Robotic_Motion_Planning_Project" target="_blank" rel="noopener"
+             onclick="event.stopPropagation()">GitHub</a>
+          <span class="sep">/</span>
+          <a href="#" onclick="event.preventDefault(); openModal('modal-robotics')">details</a>
+        </p>
+        <p class="entry-tags">Python &nbsp;·&nbsp; RRT* &nbsp;·&nbsp; Inverse Kinematics &nbsp;·&nbsp; UR5e &nbsp;·&nbsp; Robotics</p>
+      </div>
+    </div>
+
     <!-- Graphics GUI -->
     <div class="entry-row clickable" onclick="openModal('modal-graphics')">
       <div class="entry-thumb">
@@ -290,6 +313,42 @@
       <a href="https://github.com/MeravKeidar/MoP" target="_blank" rel="noopener">GitHub</a>
     </p>
     <p class="modal-tags">Grasshopper &nbsp;·&nbsp; Processing &nbsp;·&nbsp; Generative Design &nbsp;·&nbsp; Physical Fabrication</p>
+  </div>
+</div>
+
+<!-- Robotic Motion Planning -->
+<div class="modal" id="modal-robotics" role="dialog" aria-modal="true">
+  <div class="modal-backdrop" onclick="closeModal('modal-robotics')"></div>
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('modal-robotics')" aria-label="Close">×</button>
+    <h2 class="modal-title">Robotic Motion Planning – Dual-Arm UR5e Cube Manipulation</h2>
+    <div class="modal-gallery">
+      <img src="assets/projects/robotics-simulation.gif" alt="RRT* path simulation">
+    </div>
+    <p class="modal-desc">
+      A motion planning system for a dual-arm UR5e setup that picks up and relocates
+      cubes in a shared workspace. Planning runs entirely in the robot's configuration
+      space, with collision checking against the environment and the static arm.<br><br>
+      <strong>Core algorithm:</strong> RRT* with k-nearest rewiring and shortcut path
+      smoothing. A goal-biased sampler steers the tree toward the target configuration;
+      edge validity is checked at a fixed resolution along the interpolated path.
+      The planner outputs a smooth, collision-free joint trajectory that is then
+      executed on the real robot.<br><br>
+      <strong>Key components:</strong><br>
+      &nbsp;·&nbsp; <em>Forward &amp; inverse kinematics</em> — analytical IK for the UR5e to convert
+      Cartesian end-effector targets to joint configurations.<br>
+      &nbsp;·&nbsp; <em>Environment model</em> — cube positions and the second arm's static pose are
+      treated as dynamic obstacles updated between each pick-and-place step.<br>
+      &nbsp;·&nbsp; <em>Gripper control</em> — Two-Finger gripper (TwoFG7) commands integrated into
+      the execution loop.<br>
+      &nbsp;·&nbsp; <em>Visualizer</em> — 3D simulation of the planned path before real execution.<br><br>
+      The improved RRT* plan runs significantly faster and with a shorter path than a
+      naive straight-line approach, as demonstrated in the lab video results.
+    </p>
+    <p class="modal-actions">
+      <a href="https://github.com/MeravKeidar/Robotic_Motion_Planning_Project" target="_blank" rel="noopener">GitHub</a>
+    </p>
+    <p class="modal-tags">Python &nbsp;·&nbsp; RRT* &nbsp;·&nbsp; Inverse Kinematics &nbsp;·&nbsp; UR5e &nbsp;·&nbsp; Robotics</p>
   </div>
 </div>
 
