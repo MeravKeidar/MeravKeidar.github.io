@@ -116,31 +116,28 @@
     <!-- Diffusion Inpainting -->
     <div class="entry-row clickable" onclick="openModal('modal-diffusion')">
       <div class="entry-thumb">
-        <div class="thumb-ph">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-               stroke="currentColor" stroke-width="1.5">
-            <rect x="3" y="3" width="18" height="18" rx="1"/>
-            <circle cx="8.5" cy="8.5" r="1.5"/>
-            <polyline points="21,15 16,10 5,21"/>
-          </svg>
-        </div>
+        <img src="assets/projects/diffusion-kitchen.png" alt="Diffusion Inpainting">
       </div>
       <div class="entry-info">
         <p class="entry-title">
           <a href="#" onclick="event.preventDefault()">Diffusion Inpainting</a>
         </p>
         <p class="entry-desc">
-          Advanced image inpainting pipeline built on Stable Diffusion 2. Introduces masked
-          cross-attention, resampling, mask dilation, and guidance-scale scheduling to produce
-          higher-quality completions than standard diffusion inpainting baselines.
+          An advanced image inpainting pipeline built on Stable Diffusion 2. Introduces four
+          improvements over vanilla diffusion inpainting — masked cross-attention, resampling,
+          mask dilation, and guidance-scale scheduling — with a full evaluation framework and
+          an interactive GUI mask-creation tool.
         </p>
         <p class="entry-links">
           <a href="https://github.com/yonatankoren/Diffusion-Inpainting" target="_blank" rel="noopener"
              onclick="event.stopPropagation()">GitHub</a>
           <span class="sep">/</span>
+          <a href="assets/reports/diffusion-report.pdf" target="_blank"
+             onclick="event.stopPropagation()">Report</a>
+          <span class="sep">/</span>
           <a href="#" onclick="event.preventDefault(); openModal('modal-diffusion')">details</a>
         </p>
-        <p class="entry-tags">Python &nbsp;·&nbsp; PyTorch &nbsp;·&nbsp; Stable Diffusion &nbsp;·&nbsp; Generative AI</p>
+        <p class="entry-tags">Python &nbsp;·&nbsp; PyTorch &nbsp;·&nbsp; Stable Diffusion 2 &nbsp;·&nbsp; Generative AI</p>
       </div>
     </div>
 
@@ -246,25 +243,25 @@
   <div class="modal-backdrop" onclick="closeModal('modal-diffusion')"></div>
   <div class="modal-box">
     <button class="modal-close" onclick="closeModal('modal-diffusion')" aria-label="Close">×</button>
-    <h2 class="modal-title">Diffusion Inpainting</h2>
+    <h2 class="modal-title">Diffusion Inpainting – Improving Stable Diffusion 2 for Image Completion</h2>
     <div class="modal-gallery">
-      <div class="img-placeholder">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
-        <span>Add image</span>
-      </div>
-      <div class="img-placeholder">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="1"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
-        <span>Add image</span>
-      </div>
+      <img src="assets/projects/diffusion-kitchen.png"
+           alt="Kitchen example image used for inpainting">
+      <img src="assets/projects/diffusion-kucha.jpg"
+           alt="Kucha example image used for inpainting">
     </div>
     <p class="modal-desc">
-      An advanced image inpainting pipeline built on Stable Diffusion 2. At each denoising step, the
-      latent vector is mixed with an expected instance of the original image in the unmasked region,
-      preserving context while generating the masked area.<br><br>
-      Four key improvements over vanilla diffusion inpainting: <em>masked cross-attention</em> for
-      better region awareness, <em>resampling</em> to refine completions iteratively, <em>mask dilation</em>
-      for smoother boundary transitions, and <em>guidance-scale scheduling</em> to dynamically tune
-      generation quality. Includes a full evaluation framework and an interactive GUI mask-creation tool.
+      Built on top of the Hugging Face <code>sd2-community/stable-diffusion-2-base</code> model,
+      this pipeline improves the classic diffusion inpainting algorithm, in which the latent vector
+      is mixed with the original image in the unmasked region at each denoising step.<br><br>
+      Four key improvements were introduced:<br>
+      &nbsp;·&nbsp; <em>Masked cross-attention</em> — conditions generation on the unmasked context for better region awareness.<br>
+      &nbsp;·&nbsp; <em>Resampling</em> — iteratively refines completions within each denoising step (configurable: full or t&gt;500 cutoff).<br>
+      &nbsp;·&nbsp; <em>Mask dilation</em> — expands the mask slightly for smoother boundary transitions.<br>
+      &nbsp;·&nbsp; <em>Guidance-scale scheduling</em> — dynamically tunes generation quality across timesteps.<br><br>
+      Also includes an evaluation framework comparing our pipeline against a simple baseline
+      and two SOTA fine-tuned models across three datasets (COCO, EditBench, MagicBrush),
+      and an interactive GUI tool for painting masks directly on images.
     </p>
     <p class="modal-actions">
       <a href="https://github.com/yonatankoren/Diffusion-Inpainting" target="_blank" rel="noopener">GitHub</a>
