@@ -407,3 +407,15 @@ footer {
     display: none;
   }
 }
+
+/* ===== Publications: hover clips ===== */
+.pub-thumb { width: 180px; }
+.pub-thumb video {
+  width: 180px;
+  height: auto;
+  display: block;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+}
+.entry-venue { margin: 2px 0; }
+.back-link { margin: 0 0 24px; }

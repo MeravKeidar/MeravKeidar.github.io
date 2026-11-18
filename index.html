@@ -36,6 +36,8 @@
         <a href="https://github.com/MeravKeidar" target="_blank" rel="noopener">GitHub</a>
         <span class="sep">/</span>
         <a href="https://www.linkedin.com/in/merav-keidar-6346b02a8/" target="_blank" rel="noopener">LinkedIn</a>
+        <span class="sep">/</span>
+        <a href="projects.html">Projects</a>
       </p>
     </div>
     <div class="header-photo">
@@ -49,9 +51,37 @@
   <section>
     <h2>Publications</h2>
 
-    <div class="entry-row">
-      <div class="entry-thumb">
-        <img src="assets/pubs/videomdm-thumb.png" alt="VideoMDM">
+    <div class="entry-row pub-row">
+      <div class="entry-thumb pub-thumb">
+        <video muted loop playsinline preload="none" poster="assets/pubs/dyrad.jpg" src="assets/pubs/dyrad.mp4"></video>
+      </div>
+      <div class="entry-info">
+        <p class="entry-title">
+          <a href="https://dyrad-nvs.github.io/" target="_blank" rel="noopener">
+            DyRAD: Radar Novel View Synthesis for Dynamic Driving Scenes
+          </a>
+        </p>
+        <p class="entry-authors">
+          <strong>Merav Keidar</strong>, Tomer Borreda, Rajalakshmi Nandakumar, Or Litany
+        </p>
+        <p class="entry-venue"><em>arXiv</em>, 2026</p>
+        <p class="entry-desc">
+          Radar novel-view synthesis for dynamic driving scenes that renders complete
+          range&ndash;azimuth&ndash;Doppler tensors through a fixed sensor point-spread function.
+        </p>
+        <p class="entry-links">
+          <a href="https://dyrad-nvs.github.io/" target="_blank" rel="noopener">project page</a>
+          &nbsp;/&nbsp;
+          <a href="https://github.com/Dyrad-NVS/DyRAD" target="_blank" rel="noopener">code</a>
+          &nbsp;/&nbsp;
+          <a href="https://arxiv.org/abs/2609.39841" target="_blank" rel="noopener">arXiv</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="entry-row pub-row">
+      <div class="entry-thumb pub-thumb">
+        <video muted loop playsinline preload="none" poster="assets/pubs/videomdm-thumb.png" src="assets/pubs/videomdm.mp4"></video>
       </div>
       <div class="entry-info">
         <p class="entry-title">
@@ -62,146 +92,18 @@
         <p class="entry-authors">
           Amir Mann, Gal Michael Harari, <strong>Merav Keidar</strong>, Or Litany
         </p>
+        <p class="entry-venue"><em>NeurIPS</em>, 2026</p>
         <p class="entry-desc">
           A diffusion-based framework that trains 3D human motion priors directly from
           accurate 2D poses extracted from monocular videos, without any 3D ground truth.
         </p>
         <p class="entry-links">
-          <a href="https://arxiv.org/abs/2606.13364" target="_blank" rel="noopener">arXiv</a>
+          <a href="https://videomdm.github.io/" target="_blank" rel="noopener">project page</a>
           &nbsp;/&nbsp;
           <a href="https://github.com/Amir-Mann/VideoMDM_release" target="_blank" rel="noopener">code</a>
           &nbsp;/&nbsp;
-          <a href="https://videomdm.github.io/" target="_blank" rel="noopener">project page</a>
+          <a href="https://arxiv.org/abs/2606.13364" target="_blank" rel="noopener">arXiv</a>
         </p>
-      </div>
-    </div>
-
-  </section>
-
-  <hr>
-
-  <!-- ===== Projects ===== -->
-  <section>
-    <h2>Projects</h2>
-
-    <!-- Underwater NVS -->
-    <div class="entry-row clickable" onclick="openModal('modal-underwater')">
-      <div class="entry-thumb">
-        <img src="assets/projects/underwater-comparison.jpg" alt="UnderwaterEVER">
-      </div>
-      <div class="entry-info">
-        <p class="entry-title">
-          <a href="#" onclick="event.preventDefault()">UnderwaterEVER</a>
-        </p>
-        <p class="entry-desc">
-          Physics-informed underwater novel-view synthesis at real-time speed, with free scene
-          dewatering at inference.
-        </p>
-        <p class="entry-links">
-          <a href="https://github.com/MeravKeidar/Underwater_NVS" target="_blank" rel="noopener"
-             onclick="event.stopPropagation()">GitHub</a>
-          <span class="sep">/</span>
-          <a href="assets/reports/underwater-report.pdf" target="_blank"
-             onclick="event.stopPropagation()">Report</a>
-          <span class="sep">/</span>
-          <a href="#" onclick="event.preventDefault(); openModal('modal-underwater')">details</a>
-        </p>
-        <p class="entry-tags">Python &nbsp;·&nbsp; C++ &nbsp;·&nbsp; PyTorch &nbsp;·&nbsp; CUDA / OptiX &nbsp;·&nbsp; Neural Rendering</p>
-      </div>
-    </div>
-
-    <!-- Diffusion Inpainting -->
-    <div class="entry-row clickable" onclick="openModal('modal-diffusion')">
-      <div class="entry-thumb">
-        <img src="assets/projects/diffusion-results.png" alt="Diffusion Inpainting results">
-      </div>
-      <div class="entry-info">
-        <p class="entry-title">
-          <a href="#" onclick="event.preventDefault()">Diffusion Inpainting</a>
-        </p>
-        <p class="entry-desc">
-          Text-guided image inpainting pipeline extending Stable Diffusion 2 with four
-          algorithmic improvements and a full evaluation framework.
-        </p>
-        <p class="entry-links">
-          <a href="https://github.com/yonatankoren/Diffusion-Inpainting" target="_blank" rel="noopener"
-             onclick="event.stopPropagation()">GitHub</a>
-          <span class="sep">/</span>
-          <a href="assets/reports/diffusion-report.pdf" target="_blank"
-             onclick="event.stopPropagation()">Report</a>
-          <span class="sep">/</span>
-          <a href="#" onclick="event.preventDefault(); openModal('modal-diffusion')">details</a>
-        </p>
-        <p class="entry-tags">Python &nbsp;·&nbsp; PyTorch &nbsp;·&nbsp; Stable Diffusion 2 &nbsp;·&nbsp; Generative AI</p>
-      </div>
-    </div>
-
-    <!-- MoP Drawing Machine -->
-    <div class="entry-row clickable" onclick="openModal('modal-mop')">
-      <div class="entry-thumb">
-        <img src="assets/projects/mop-machine.jpg" alt="MoP Drawing Machine">
-      </div>
-      <div class="entry-info">
-        <p class="entry-title">
-          <a href="#" onclick="event.preventDefault()">MoP – Drawing Machine</a>
-        </p>
-        <p class="entry-desc">
-          A real-life pintograph drawing machine paired with a Grasshopper simulator and
-          interactive GUI.
-        </p>
-        <p class="entry-links">
-          <a href="https://github.com/MeravKeidar/MoP" target="_blank" rel="noopener"
-             onclick="event.stopPropagation()">GitHub</a>
-          <span class="sep">/</span>
-          <a href="#" onclick="event.preventDefault(); openModal('modal-mop')">details</a>
-        </p>
-        <p class="entry-tags">Grasshopper &nbsp;·&nbsp; Processing &nbsp;·&nbsp; Generative Design &nbsp;·&nbsp; Fabrication</p>
-      </div>
-    </div>
-
-    <!-- Robotic Motion Planning -->
-    <div class="entry-row clickable" onclick="openModal('modal-robotics')">
-      <div class="entry-thumb">
-        <img src="assets/projects/robotics-simulation.gif" alt="UR5e dual-arm RRT* motion planning simulation">
-      </div>
-      <div class="entry-info">
-        <p class="entry-title">
-          <a href="#" onclick="event.preventDefault()">Robotic Motion Planning</a>
-        </p>
-        <p class="entry-desc">
-          Dual-arm UR5e manipulation using RRT* planning in configuration space, with
-          collision avoidance, inverse kinematics, and real robot execution.
-        </p>
-        <p class="entry-links">
-          <a href="https://github.com/MeravKeidar/Robotic_Motion_Planning_Project" target="_blank" rel="noopener"
-             onclick="event.stopPropagation()">GitHub</a>
-          <span class="sep">/</span>
-          <a href="#" onclick="event.preventDefault(); openModal('modal-robotics')">details</a>
-        </p>
-        <p class="entry-tags">Python &nbsp;·&nbsp; RRT* &nbsp;·&nbsp; Inverse Kinematics &nbsp;·&nbsp; UR5e &nbsp;·&nbsp; Robotics</p>
-      </div>
-    </div>
-
-    <!-- Graphics GUI -->
-    <div class="entry-row clickable" onclick="openModal('modal-graphics')">
-      <div class="entry-thumb">
-        <img src="assets/projects/graphics-cow.jpg" alt="Graphics GUI – reflective cow with environment mapping">
-      </div>
-      <div class="entry-info">
-        <p class="entry-title">
-          <a href="#" onclick="event.preventDefault()">Graphics GUI</a>
-        </p>
-        <p class="entry-desc">
-          Real-time 3D rendering GUI built with OpenGL, featuring configurable shaders, mesh
-          loading, and interactive lighting.
-        </p>
-        <p class="entry-links">
-          <a href="https://github.com/MeravKeidar/Graphics-GUI" target="_blank" rel="noopener"
-             onclick="event.stopPropagation()">GitHub</a>
-          <span class="sep">/</span>
-          <a href="#" onclick="event.preventDefault(); openModal('modal-graphics')">details</a>
-        </p>
-        <p class="entry-tags">C++ &nbsp;·&nbsp; OpenGL &nbsp;·&nbsp; ImGui &nbsp;·&nbsp; GLSL</p>
       </div>
     </div>
 
@@ -213,202 +115,15 @@
 
 </div>
 
-<!-- ===== Modals ===== -->
-
-<!-- Underwater NVS -->
-<div class="modal" id="modal-underwater" role="dialog" aria-modal="true">
-  <div class="modal-backdrop" onclick="closeModal('modal-underwater')"></div>
-  <div class="modal-box">
-    <button class="modal-close" onclick="closeModal('modal-underwater')" aria-label="Close">×</button>
-    <h2 class="modal-title">UnderwaterEVER – Physics-Informed Underwater Novel View Synthesis</h2>
-    <div class="modal-gallery">
-      <img src="assets/projects/underwater-grid.png"
-           alt="Qualitative comparison (GT · SeaThru-NeRF · EVER · UnderwaterEVER) across all four scenes">
-      <img src="assets/projects/underwater-restoration.jpg"
-           alt="Scene restoration on Curaçao: ground-truth underwater · our render · dewatered render">
-      <img src="assets/projects/underwater-comparison.jpg"
-           alt="Novel-view synthesis on four SeaThru-NeRF scenes">
-    </div>
-    <p class="modal-desc">
-      UnderwaterEVER bridges two competing approaches: the fast but physics-agnostic
-      <a href="https://arxiv.org/abs/2410.01804" target="_blank" rel="noopener">EVER</a>
-      renderer and the physically accurate but slow
-      <a href="https://sea-thru-nerf.github.io/" target="_blank" rel="noopener">SeaThru-NeRF</a>.
-      It embeds a differentiable underwater image-formation model directly inside EVER's
-      volumetric renderer — replacing each segment's single color term with two physically
-      grounded terms: attenuated object color and depth-dependent backscatter.<br><br>
-      The physics is controlled by <em>WaterGlobal</em>, a tiny module holding just
-      <strong>9 learnable scalars</strong> (σ<sub>D</sub>, σ<sub>B</sub>, c<sub>med</sub>) shared across all views.
-      σ<sub>D</sub> is seeded from per-channel image statistics and constrained by a spectral-ordering
-      loss (σ<sub>D,R</sub> ≥ σ<sub>D,G</sub> ≥ σ<sub>D,B</sub>), reflecting how seawater absorbs red faster than green
-      faster than blue. Zeroing these parameters at inference yields free scene restoration
-      — color-corrected, dewatered views with no clean-water ground truth.<br><br>
-      <strong>Results on the SeaThru-NeRF benchmark (4 scenes, RTX 6000 Ada):</strong><br>
-      27.22 dB avg. PSNR · 0.882 avg. SSIM · 20 FPS
-      — best on both metrics, matching EVER's speed to within 1.6%.
-    </p>
-    <p class="modal-actions">
-      <a href="https://github.com/MeravKeidar/Underwater_NVS" target="_blank" rel="noopener">GitHub</a>
-      <span class="modal-sep">/</span>
-      <a href="assets/reports/underwater-report.pdf" target="_blank">Report PDF</a>
-    </p>
-    <p class="modal-tags">Python &nbsp;·&nbsp; C++ &nbsp;·&nbsp; PyTorch &nbsp;·&nbsp; CUDA / OptiX &nbsp;·&nbsp; Neural Rendering</p>
-  </div>
-</div>
-
-<!-- Diffusion Inpainting -->
-<div class="modal" id="modal-diffusion" role="dialog" aria-modal="true">
-  <div class="modal-backdrop" onclick="closeModal('modal-diffusion')"></div>
-  <div class="modal-box">
-    <button class="modal-close" onclick="closeModal('modal-diffusion')" aria-label="Close">×</button>
-    <h2 class="modal-title">Diffusion Inpainting – Improving Stable Diffusion 2 for Image Completion</h2>
-    <div class="modal-gallery">
-      <img src="assets/projects/diffusion-results.png"
-           alt="Qualitative inpainting results">
-    </div>
-    <p class="modal-desc">
-      Built on top of the Hugging Face <code>sd2-community/stable-diffusion-2-base</code> model,
-      this pipeline improves the classic diffusion inpainting algorithm, in which the latent vector
-      is mixed with the original image in the unmasked region at each denoising step.<br><br>
-      Four key improvements were introduced:<br>
-      &nbsp;·&nbsp; <em>Masked cross-attention</em> — conditions generation on the unmasked context for better region awareness.<br>
-      &nbsp;·&nbsp; <em>Resampling</em> — iteratively refines completions within each denoising step (configurable: full or t&gt;500 cutoff).<br>
-      &nbsp;·&nbsp; <em>Mask dilation</em> — expands the mask slightly for smoother boundary transitions.<br>
-      &nbsp;·&nbsp; <em>Guidance-scale scheduling</em> — dynamically tunes generation quality across timesteps.<br><br>
-      Also includes an evaluation framework comparing our pipeline against a simple baseline
-      and two SOTA fine-tuned models across three datasets (COCO, EditBench, MagicBrush),
-      and an interactive GUI tool for painting masks directly on images.
-    </p>
-    <p class="modal-actions">
-      <a href="https://github.com/yonatankoren/Diffusion-Inpainting" target="_blank" rel="noopener">GitHub</a>
-      <span class="modal-sep">/</span>
-      <a href="assets/reports/diffusion-report.pdf" target="_blank">Report PDF</a>
-    </p>
-    <p class="modal-tags">Python &nbsp;·&nbsp; PyTorch &nbsp;·&nbsp; Stable Diffusion 2 &nbsp;·&nbsp; Generative AI</p>
-  </div>
-</div>
-
-<!-- MoP Drawing Machine -->
-<div class="modal" id="modal-mop" role="dialog" aria-modal="true">
-  <div class="modal-backdrop" onclick="closeModal('modal-mop')"></div>
-  <div class="modal-box">
-    <button class="modal-close" onclick="closeModal('modal-mop')" aria-label="Close">×</button>
-    <h2 class="modal-title">MoP – Drawing Machine</h2>
-    <div class="modal-gallery">
-      <img src="assets/projects/mop-machine.jpg" alt="CAD render of the drawing machine">
-      <img src="assets/projects/mop-drawing.png" alt="Machine in action drawing on canvas">
-      <img src="assets/projects/mop-patterns.png" alt="Four physical drawings produced by the machine">
-      <img src="assets/projects/mop-gui.jpg" alt="PintoProc GUI – motor controls and live simulation">
-      <img src="assets/projects/mop-grasshopper.jpg" alt="Grasshopper plug-in simulating the pintograph geometry">
-    </div>
-    <p class="modal-desc">
-      A fully functional pintograph drawing machine designed and built from scratch, paired
-      with a complete software stack for design and control.<br><br>
-      The machine uses three independently driven discs (two arm discs + one rotating canvas)
-      to trace complex Lissajous-like paths. Speed ratios and rotation directions are the main
-      design parameters — small changes produce dramatically different patterns.<br><br>
-      <strong>Software stack:</strong><br>
-      &nbsp;·&nbsp; <em>Grasshopper plug-in</em> — parametric simulation of the pintograph geometry
-      directly inside Rhino; tracks the pen-point path in real time to preview patterns before printing.<br>
-      &nbsp;·&nbsp; <em>PintoProc GUI</em> (Processing 4 / Java) — controls all three motors via serial,
-      manages speed/direction/acceleration, runs a live pattern preview, and exports PNGs.
-      One click sends the configuration to the machine.<br><br>
-      Created with Ashish Jain and Shay Sharvit as part of the studio course
-      <em>Matter of Perspective</em>, directed by Prof. Gershon Elber and Yoav Sterman.
-    </p>
-    <p class="modal-actions">
-      <a href="https://github.com/MeravKeidar/MoP" target="_blank" rel="noopener">GitHub</a>
-    </p>
-    <p class="modal-tags">Grasshopper &nbsp;·&nbsp; Processing &nbsp;·&nbsp; Generative Design &nbsp;·&nbsp; Physical Fabrication</p>
-  </div>
-</div>
-
-<!-- Robotic Motion Planning -->
-<div class="modal" id="modal-robotics" role="dialog" aria-modal="true">
-  <div class="modal-backdrop" onclick="closeModal('modal-robotics')"></div>
-  <div class="modal-box">
-    <button class="modal-close" onclick="closeModal('modal-robotics')" aria-label="Close">×</button>
-    <h2 class="modal-title">Robotic Motion Planning – Dual-Arm UR5e Cube Manipulation</h2>
-    <div class="modal-gallery">
-      <img src="assets/projects/robotics-simulation.gif" alt="RRT* path simulation">
-      <video controls muted playsinline style="height:180px;width:auto;flex-shrink:0;border:1px solid #e0e0e0;">
-        <source src="assets/projects/robotics-lab.mp4" type="video/mp4">
-      </video>
-    </div>
-    <p class="modal-desc">
-      A motion planning system for a dual-arm UR5e setup that picks up and relocates
-      cubes in a shared workspace. Planning runs entirely in the robot's configuration
-      space, with collision checking against the environment and the static arm.<br><br>
-      <strong>Core algorithm:</strong> RRT* with k-nearest rewiring and shortcut path
-      smoothing. A goal-biased sampler steers the tree toward the target configuration;
-      edge validity is checked at a fixed resolution along the interpolated path.
-      The planner outputs a smooth, collision-free joint trajectory that is then
-      executed on the real robot.<br><br>
-      <strong>Key components:</strong><br>
-      &nbsp;·&nbsp; <em>Forward &amp; inverse kinematics</em> — analytical IK for the UR5e to convert
-      Cartesian end-effector targets to joint configurations.<br>
-      &nbsp;·&nbsp; <em>Environment model</em> — cube positions and the second arm's static pose are
-      treated as dynamic obstacles updated between each pick-and-place step.<br>
-      &nbsp;·&nbsp; <em>Gripper control</em> — Two-Finger gripper (TwoFG7) commands integrated into
-      the execution loop.<br>
-      &nbsp;·&nbsp; <em>Visualizer</em> — 3D simulation of the planned path before real execution.<br><br>
-      The improved RRT* plan runs significantly faster and with a shorter path than a
-      naive straight-line approach, as demonstrated in the lab video results.
-    </p>
-    <p class="modal-actions">
-      <a href="https://github.com/MeravKeidar/Robotic_Motion_Planning_Project" target="_blank" rel="noopener">GitHub</a>
-    </p>
-    <p class="modal-tags">Python &nbsp;·&nbsp; RRT* &nbsp;·&nbsp; Inverse Kinematics &nbsp;·&nbsp; UR5e &nbsp;·&nbsp; Robotics</p>
-  </div>
-</div>
-
-<!-- Graphics GUI -->
-<div class="modal" id="modal-graphics" role="dialog" aria-modal="true">
-  <div class="modal-backdrop" onclick="closeModal('modal-graphics')"></div>
-  <div class="modal-box">
-    <button class="modal-close" onclick="closeModal('modal-graphics')" aria-label="Close">×</button>
-    <h2 class="modal-title">Graphics GUI</h2>
-    <div class="modal-gallery">
-      <img src="assets/projects/graphics-cow.jpg"
-           alt="Reflective chrome cow with environment/skybox mapping">
-    </div>
-    <p class="modal-desc">
-      A real-time 3D rendering engine with an ImGui interface, built from scratch in C++ and
-      OpenGL as part of the Computer Graphics course at Technion CS.<br><br>
-      <strong>Rendering features:</strong><br>
-      &nbsp;·&nbsp; <em>Shading modes</em> — Phong, Gouraud, and Flat shading, each implemented as a separate
-      GLSL vertex/fragment shader pair.<br>
-      &nbsp;·&nbsp; <em>Texture mapping</em> — UV-mapped diffuse textures on arbitrary OBJ meshes.<br>
-      &nbsp;·&nbsp; <em>Normal mapping</em> — tangent-space normal maps for surface detail without extra geometry.<br>
-      &nbsp;·&nbsp; <em>Environment mapping</em> — skybox cubemap with reflective/refractive materials
-      (as seen in the chrome cow render above).<br>
-      &nbsp;·&nbsp; <em>Shader animations</em> — vertex-shader deformations (stretch along X/Y/Z axes, noisy turbulence) and fragment-shader effects (sinusoidal color cycling, procedural marble texture), all time-driven and toggleable from the GUI.<br>
-      &nbsp;·&nbsp; <em>Lighting</em> — configurable point and directional lights with interactive controls.<br><br>
-      The ImGui interface allows switching shaders, loading OBJ files, tweaking lighting
-      parameters, and manipulating the scene in real time.
-    </p>
-    <p class="modal-actions">
-      <a href="https://github.com/MeravKeidar/Graphics-GUI" target="_blank" rel="noopener">GitHub</a>
-    </p>
-    <p class="modal-tags">C++ &nbsp;·&nbsp; OpenGL &nbsp;·&nbsp; ImGui &nbsp;·&nbsp; GLSL</p>
-  </div>
-</div>
-
 <script>
-  function openModal(id) {
-    document.getElementById(id).classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeModal(id) {
-    document.getElementById(id).classList.remove('open');
-    document.body.style.overflow = '';
-  }
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-      document.querySelectorAll('.modal.open').forEach(function(m) {
-        closeModal(m.id);
-      });
-    }
+  // Publication clips: play on hover (desktop); autoplay on touch screens.
+  var touch = window.matchMedia('(hover: none)').matches;
+  document.querySelectorAll('.pub-row').forEach(function(row) {
+    var v = row.querySelector('video');
+    if (!v) return;
+    if (touch) { v.autoplay = true; v.preload = 'auto'; v.play().catch(function(){}); return; }
+    row.addEventListener('mouseenter', function() { v.play().catch(function(){}); });
+    row.addEventListener('mouseleave', function() { v.pause(); v.currentTime = 0; });
   });
 </script>
 
